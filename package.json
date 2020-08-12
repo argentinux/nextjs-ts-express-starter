@@ -29,9 +29,6 @@
     "typescript"
   ],
   "author": "@argentinux",
-  "engines": {
-    "node": "14.2.0"
-  },
   "license": "MIT",
   "dependencies": {
     "next": "^9.5.1",
