@@ -5,13 +5,13 @@ function setupCloseOnExit(server) {
     await server
       .close()
       .then(() => {
-        logger.info(`Server closed successfully`)
-        // TODO check event
-        process.exit()
+        logger.info(`>> Server closed successfully`)
       })
       .catch(() => {
-        logger.warn(`Fail to close server`)
+        logger.warn(`>> Fail to close server`)
       })
+    // TODO check event
+    process.exit()
   }
   const events = 'exit SIGINT uncaughtException SIGUSR1 SIGUSR2'
   events.split(' ').forEach((event) => {
