@@ -8,7 +8,6 @@
     "moduleResolution": "node",
     "strict": true,
     "noEmit": true,
-    "allowJs": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "strictBindCallApply": true,
