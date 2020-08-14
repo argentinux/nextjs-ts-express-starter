@@ -6,8 +6,9 @@
   "scripts": {
     "dev:server": "nodemon --quiet",
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "next build && tsc -P src/server/tsconfig.json",
+    "start:next": "next start",
+    "start": "cross-env NODE_ENV=production node dist/index.js",
     "lint": "eslint --ext .ts,.tsx --fix",
     "format": "prettier --loglevel silent --write  \"**/*.{js,jsx,ts,tsx}\"",
     "type-check": "tsc --pretty --noEmit"
@@ -32,6 +33,7 @@
   "author": "@argentinux",
   "license": "MIT",
   "dependencies": {
+    "cross-env": "^7.0.2",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
     "loglevel": "^1.6.8",
