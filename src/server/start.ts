@@ -1,5 +1,6 @@
 import express from 'express'
 import logger from 'loglevel'
+import 'express-async-errors'
 
 import { NextHandlerType } from '.'
 import errorHandler from './middleware/error'
