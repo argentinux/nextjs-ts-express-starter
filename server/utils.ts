@@ -2,7 +2,6 @@ import logger from 'loglevel'
 
 function setupCloseOnExit(server) {
   async function handleClose() {
-    console.log(process.eventNames())
     await server
       .close()
       .then(() => {
