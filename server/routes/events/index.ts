@@ -4,7 +4,7 @@ const dumbEvents = [
   {
     name: 'My first event',
     date: '2020-12-12',
-    description: 'Event from express server',
+    description: 'Event from express server.',
   },
 ]
 

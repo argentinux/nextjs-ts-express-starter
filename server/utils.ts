@@ -2,13 +2,14 @@ import logger from 'loglevel'
 
 function setupCloseOnExit(server) {
   async function handleClose() {
+    console.log(process.eventNames())
     await server
       .close()
       .then(() => {
         logger.info(`>> Server closed successfully`)
       })
-      .catch(() => {
-        logger.warn(`>> Fail to close server`)
+      .catch((e) => {
+        logger.warn(`>> Fail to close server`, e.stack)
       })
     // TODO check event
     process.exit()
