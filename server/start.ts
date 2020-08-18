@@ -7,11 +7,15 @@ import errorHandler from './middleware/error'
 import { promisify } from 'util'
 import { setupCloseOnExit } from './utils'
 import getRoutes from './routes'
+import bodyParser from 'body-parser'
 
 function startServer(handle: NextHandlerType, port: number) {
   const app = express()
 
   app.disable('x-powered-by')
+
+  app.use(bodyParser.json())
+  app.use(bodyParser.urlencoded({ extended: false }))
 
   app.use('/api', getRoutes())
 
